@@ -47,9 +47,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Darker Overlay */}
       <div className="absolute inset-0 bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url('${slides[currentSlide].image}')` }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-hero-overlay/90 via-hero-bg/85 to-hero-bg/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/70"></div>
       </div>
 
       {/* Animated Background Characters/Silhouettes */}
