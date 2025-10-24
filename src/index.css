@@ -127,15 +127,27 @@ All colors MUST be HSL.
     height: 100%;
     background-color: hsl(345, 75%, 30%);
     background-image: url('/images/cross.png');
-    background-size: 60px 60px;
+    background-size: 80px 80px;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
   }
 
   .ministry-image:hover::before {
     opacity: 0.9;
+    transform: scale(1);
+    animation: pulse-overlay 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-overlay {
+    0%, 100% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 0.75;
+    }
   }
 }
