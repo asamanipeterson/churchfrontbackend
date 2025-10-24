@@ -39,8 +39,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center p-2">
-              <img src="/images/cross.png" alt="Cross" className="w-full h-full object-contain" />
+            <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center p-1.5">
+              <img src="/images/cross.png" alt="Cross" className="w-full h-full object-contain brightness-0 invert" />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-primary-foreground">ZEGEN</h1>
