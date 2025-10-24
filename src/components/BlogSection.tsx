@@ -92,8 +92,8 @@ const BlogSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 bg-accent hover:bg-accent/90 text-accent-foreground border-0" />
-          <CarouselNext className="hidden md:flex -right-12 bg-accent hover:bg-accent/90 text-accent-foreground border-0" />
+          <CarouselPrevious className="-left-4 md:-left-12 bg-accent hover:bg-accent/90 text-accent-foreground border-0" />
+          <CarouselNext className="-right-4 md:-right-12 bg-accent hover:bg-accent/90 text-accent-foreground border-0" />
         </Carousel>
       </div>
     </section>
