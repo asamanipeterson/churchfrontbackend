@@ -150,4 +150,12 @@ All colors MUST be HSL.
       opacity: 0.75;
     }
   }
+
+  /* Navigation link plus sign */
+  nav a::after {
+    content: '+';
+    margin-left: 0.25rem;
+    opacity: 0.5;
+    font-weight: 300;
+  }
 }
