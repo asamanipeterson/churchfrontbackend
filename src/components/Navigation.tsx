@@ -49,7 +49,7 @@ const Navigation = () => {
           </div>
 
           {/* Navigation links */}
-          <nav className="hidden md:flex items-center gap-6 text-primary-foreground">
+          <nav className="hidden lg:flex items-center gap-4 text-primary-foreground text-sm">
             <a href="#" className="hover:text-accent transition-colors">HOME</a>
             <a href="#" className="hover:text-accent transition-colors">PAGES</a>
             <a href="#" className="hover:text-accent transition-colors">SERMONS</a>
@@ -60,21 +60,21 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-primary-foreground"
+            className="lg:hidden text-primary-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
           {/* Donate button */}
-          <Button className="hidden md:block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
+          <Button className="hidden lg:block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
             DONATE
           </Button>
         </div>
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-primary/20 animate-fade-in">
+          <nav className="lg:hidden py-4 border-t border-primary/20 animate-fade-in">
             <div className="flex flex-col gap-4 text-primary-foreground">
               <a href="#" className="hover:text-accent transition-colors">HOME</a>
               <a href="#" className="hover:text-accent transition-colors">PAGES</a>
