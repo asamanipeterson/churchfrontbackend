@@ -31,4 +31,4 @@ export const register = async (data: RegisterData) => {
 export const logout = async () => {
   await csrf();
   await api.post("/logout");
-};
+     };   
