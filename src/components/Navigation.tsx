@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Menu, X } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Mail, MapPin, Menu, X, Shield } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary/20">
@@ -51,7 +53,7 @@ const Navigation = () => {
           {/* Navigation links */}
           <nav className="hidden lg:flex items-center gap-4 text-primary-foreground text-sm">
             <a href="#" className="hover:text-accent transition-colors">HOME</a>
-            <a href="#" className="hover:text-accent transition-colors">PAGES</a>
+            <a href="#" className="hover:text-accent transition-colors">ABOUT</a>
             <a href="#" className="hover:text-accent transition-colors">SERMONS</a>
             <a href="#" className="hover:text-accent transition-colors">MINISTRIES</a>
             <a href="#" className="hover:text-accent transition-colors">BLOG</a>
@@ -66,10 +68,25 @@ const Navigation = () => {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          {/* Donate button */}
-          <Button className="hidden lg:block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
-            DONATE
-          </Button>
+          {/* Admin and Donate buttons */}
+         {/* Admin and Donate buttons */}
+<div className="hidden lg:flex items-center gap-2">
+
+            {/* ✅ Show Admin only if user is admin */}
+            {user?.user_type === "admin" && (
+              <Link to="/admin">
+                <Button variant="outline" className="text-primary-foreground border-primary-foreground/20">
+                  <Shield className="w-4 h-4 mr-2" />
+                  Admin
+                </Button>
+              </Link>
+            )}
+
+  <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
+    DONATE
+  </Button>
+</div>
+
         </div>
 
         {/* Mobile menu */}
@@ -77,11 +94,20 @@ const Navigation = () => {
           <nav className="lg:hidden py-4 border-t border-primary/20 animate-fade-in">
             <div className="flex flex-col gap-4 text-primary-foreground">
               <a href="#" className="hover:text-accent transition-colors">HOME</a>
-              <a href="#" className="hover:text-accent transition-colors">PAGES</a>
+              <a href="#" className="hover:text-accent transition-colors">ABOUT</a>
               <a href="#" className="hover:text-accent transition-colors">SERMONS</a>
               <a href="#" className="hover:text-accent transition-colors">MINISTRIES</a>
               <a href="#" className="hover:text-accent transition-colors">BLOG</a>
               <a href="#" className="hover:text-accent transition-colors">CONTACT US</a>
+              {user?.user_type === "admin" && (
+                  <Link to="/admin">
+                    <Button variant="outline" className="text-primary-foreground border-primary-foreground/20 w-full">
+                      <Shield className="w-4 h-4 mr-2" />
+                      Admin
+                    </Button>
+                  </Link>
+                )}
+
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 w-full">
                 DONATE
               </Button>

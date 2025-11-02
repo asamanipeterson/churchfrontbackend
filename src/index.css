@@ -139,7 +139,7 @@ All colors MUST be HSL.
   .ministry-image:hover::before {
     opacity: 0.9;
     transform: scale(1);
-    animation: pulse-overlay 2s ease-in-out infinite;
+    animation: pulse-overlay 1s ease-in-out infinite;
   }
 
   @keyframes pulse-overlay {

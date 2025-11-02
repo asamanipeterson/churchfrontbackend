@@ -6,14 +6,18 @@ import QuoteSection from "@/components/QuoteSection";
 import MinistriesSection from "@/components/MinistriesSection";
 import EventsCarousel from "@/components/EventsCarousel";
 import ContactSection from "@/components/ContactSection";
+import LiveStreamSection from "@/components/LiveStreamSection";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
+import ApiTest from "@/components/ApiTest";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background dark">
       <Navigation />
       <Hero />
+      <LiveStreamSection />
+      {/* <ApiTest /> */}
       <NewsSection />
       <AboutSection />
       <QuoteSection />
