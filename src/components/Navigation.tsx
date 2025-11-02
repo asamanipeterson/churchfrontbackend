@@ -100,13 +100,13 @@ const Navigation = () => {
               <a href="#" className="hover:text-accent transition-colors">BLOG</a>
               <a href="#" className="hover:text-accent transition-colors">CONTACT US</a>
               {user?.user_type === "admin" && (
-                  <Link to="/admin">
-                    <Button variant="outline" className="text-primary-foreground border-primary-foreground/20 w-full">
-                      <Shield className="w-4 h-4 mr-2" />
-                      Admin
-                    </Button>
-                  </Link>
-                )}
+                <Link to="/admin">
+                  <Button variant="outline" className="text-primary-foreground border-primary-foreground/20 w-full">
+                    <Shield className="w-4 h-4 mr-2" />
+                    Admin
+                  </Button>
+                </Link>
+              )}
 
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 w-full">
                 DONATE
