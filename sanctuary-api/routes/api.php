@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MinistryController;
+use App\Http\Controllers\LiveStreamController;
 
 
 Route::middleware('auth:sanctum')->controller(AuthController::class)->group(function () {
@@ -42,4 +43,9 @@ Route::middleware('auth:sanctum')->controller(MinistryController::class)->group(
     Route::post('/ministries',  'store');
     Route::put('/ministries/{ministry}',  'update');
     Route::delete('/ministries/{ministry}',  'destroy');
+});
+
+Route::middleware('auth:sanctum')->controller(LiveStreamController::class)->group(function () {
+    Route::get('/livestream', 'show');
+    Route::put('/livestream', 'update');
 });
