@@ -9,12 +9,14 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MinistryController;
 use App\Http\Controllers\LiveStreamController;
 
+Route::controller(AuthController::class)->group(function () {
+    Route::post('/register', 'register');
+    Route::post('/login',  'login');
+});
 
 Route::middleware('auth:sanctum')->controller(AuthController::class)->group(function () {
     Route::post('/logout',  'logout');
     Route::get('/user',  'user');
-    Route::post('/register', 'register');
-    Route::post('/login',  'login');
 });
 
 Route::middleware('auth:sanctum')->controller(EventController::class)->group(function () {
