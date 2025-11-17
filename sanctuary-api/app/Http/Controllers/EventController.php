@@ -21,7 +21,7 @@ class EventController extends Controller
             'month' => ['required', 'regex:/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)$/i'],
             'time' => ['required', 'regex:/^[0-9]{1,2}\.[0-9]{2} (am|pm)$/i'],
             'location' => ['required', 'string', 'min:3'],
-            'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp', 'max:2048'],
         ]);
 
         if ($request->hasFile('image')) {

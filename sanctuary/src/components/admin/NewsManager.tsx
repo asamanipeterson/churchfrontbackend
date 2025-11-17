@@ -205,7 +205,7 @@ const NewsManager = () => {
       <div className="grid gap-6 md:grid-cols-2">
         {news.length === 0 && <p className="text-center text-muted-foreground py-12 col-span-full">No News yet.</p>}
         {news.map((n) => (
-          <NewsCard key={n.id} NewsItem={n} onEdit={() => handleEdit(n)} onDelete={() => handleDelete(n.id)} />
+          <NewsCard key={n.id} NewsItem={n} onEdit={() => handleEdit(n)} onDelete={() => handleDelete(n.id)} /> 
         ))}
       </div>
     </div>

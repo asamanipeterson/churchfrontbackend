@@ -45,7 +45,7 @@ class MinistryController extends Controller
             'title'       => 'sometimes|required|string|max:255',
             'description' => 'sometimes|required|string|max:1000',
             // 'icon'        => 'sometimes|required|string|max:50', // REMOVED
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg|max:6144',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,webp|max:6144',
         ];
 
         $validated = $request->validate($rules);

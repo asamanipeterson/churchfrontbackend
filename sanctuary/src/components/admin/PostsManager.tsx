@@ -17,7 +17,7 @@ import {
 import {
   createPost,
   updatePost,
-  deletePost,
+  deletePost, 
   fetchPosts,
   type Post,
 } from "@/lib/posts";

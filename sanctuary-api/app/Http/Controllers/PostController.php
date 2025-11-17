@@ -23,7 +23,7 @@ class PostController extends Controller
             'date'     => 'required|date_format:Y-m-d',
             'author'   => 'sometimes|string|max:255',
             'description' => 'required|string|max:1000', // ADDED
-            'image'    => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'image'    => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         if ($request->hasFile('image')) {

@@ -20,7 +20,7 @@ class NewsController extends Controller
             'category'    => 'required|string|max:255',
             'date'        => 'required|date_format:Y-m-d',
             'description' => 'required|string|max:500',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
